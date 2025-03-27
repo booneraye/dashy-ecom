@@ -1,47 +1,514 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: Dashboard
+  description: Everything in one place
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
 appConfig:
-  theme: colorful
+  theme: glass
+  layout: auto
+  iconSize: small
+  auth:
+    users:
+      - user: boone
+        hash: 077b01f2dc3bb5a3269887aeea008bb471d7f60adf5aafa07f74e9e6cad09c35
+        type: admin
+      - user: ecom
+        hash: 3d52c13501feace51c4cd3fb7288ad1eaea524e33a758448a080d0ac0a44313a
+        type: normal
+  customCss: |-
+    .tile-title {
+    min-width: 200px !important;
 
-# Main content - An array of sections, each containing an array of items
+    }
+
+    .tile-title, .tile-title span.text{
+    text-overflow: unset !important
+    }
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: ORDER CUT OFF
+    widgets:
+      - type: clock
+        options:
+          timeZone: Asia/Manila
+          format: en-US
+          hideDate: false
+        id: 0_899_clock
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_0
+        title: 'MP: 8AM & 1PM'
+        description: ''
+        icon: 📢
+        url: '#'
+        target: sametab
+        id: 0_899_mpampm
+      - &ref_1
+        title: '.pH: 10AM & 2PM'
+        icon: 📢
+        url: '#'
+        target: sametab
+        id: 1_899_phampm
+    icon: 🗓️
+    filteredItems:
+      - *ref_0
+      - *ref_1
+  - name: Nespresso
+    icon: 🌏
+    items:
+      - &ref_2
+        title: Website Admin
+        icon: ⚙️
+        url: https://www.nespresso.ph/admin_1vi0y5
+        target: newtab
+        statusCheckUrl: https://www.nespresso.ph/admin_1vi0y5
+        statusCheck: true
+        id: 0_962_websiteadmin
+      - &ref_3
+        title: Website
+        icon: 🌐
+        url: https://nespresso.ph
+        target: newtab
+        statusCheckUrl: https://nespresso.ph
+        statusCheck: true
+        id: 1_962_website
+      - &ref_4
+        title: Order Monitoring - March 2025
+        icon: 🗳️
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ESJQl5EvkpRDpWsiITCGDtEBUwDJ45wQcNrJY4tV_dT1yA?e=u4z0Ww
+        target: newtab
+        statusCheck: true
+        id: 2_962_ordermonitoringmarch
+      - &ref_5
+        title: Order Status Update
+        icon: 🔃
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cmbernabe_novateur_ph/ESBmPI1BOk9Op3gN1NXTCbwBgsynj3CmC4fyOpBFWCoHlQ?e=TzQbvF
+        target: newtab
+        statusCheck: true
+        id: 3_962_orderstatusupdate
+      - &ref_6
+        title: Paynamics
+        icon: 💸
+        url: https://ptibis.paynamics.net/paygate/default.aspx
+        target: newtab
+        statusCheck: true
+        id: 4_962_paynamics
+      - &ref_7
+        title: CEBU ORDERS
+        url: >-
+          https://docs.google.com/spreadsheets/d/1regufAfINzdwO8-EZESMWvkS4qJujTUBZso6bgez1d8/edit?usp=sharing
+        target: newtab
+        id: 5_962_cebuorders
+      - &ref_8
+        title: Ecom Events
+        url: >-
+          https://docs.google.com/spreadsheets/d/1b-04regfcFGSQ0vmyJQ24eYIv1-Sovwy_WQpEQ09v5g/edit?gid=1760566435#gid=1760566435
+        target: newtab
+        id: 6_962_ecomevents
+      - &ref_9
+        title: New Paynamics Dashboard
+        url: https://ptidashboard.paynamics.net/signin
+        target: newtab
+        id: 7_962_newpaynamicsdashboard
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    filteredItems:
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+      - *ref_6
+      - *ref_7
+      - *ref_8
+      - *ref_9
+  - name: Tools
+    icon: 🛠️
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_10
+        title: Emoji Icon
+        icon: favicon
+        url: https://emojidb.org/payment-emojis?utm_source=user_search
+        target: newtab
+        statusCheck: true
+        id: 0_529_emojiicon
+      - &ref_11
+        title: ChatGPT
+        icon: favicon
+        url: https://chatgpt.com/
+        target: newtab
+        statusCheck: true
+        id: 1_529_chatgpt
+      - &ref_12
+        title: Emails
+        icon: favicon
+        url: https://outlook.office.com/mail/
+        target: newtab
+        statusCheck: true
+        id: 2_529_emails
+      - &ref_13
+        title: Spareparts Monitoring
+        icon: favicon
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/jmblanco_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7B16B397A2-9546-4DA5-BD1A-4DA583E6CC2E%7D&file=EXTERNAL%20PARTS%20ECOM%20GUIDE%2007-08-24.xlsx&action=default&mobileredirect=true
+        target: newtab
+        id: 3_529_sparepartsmonitoring
+      - &ref_14
+        title: LBC Tracker
+        icon: favicon
+        url: https://www.lbcexpress.com/track/
+        target: newtab
+        statusCheck: true
+        id: 4_529_lbctracker
+      - &ref_15
+        title: Voucher Monitoring
+        icon: favicon
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/dbalmazan_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7B7a7c21e7-bfa6-4eff-8c38-d2e99553fdcb%7D&action=default
+        target: newtab
+        id: 5_529_vouchermonitoring
+      - &ref_16
+        title: Billings
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/personal/jmblanco_novateur_ph/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjmblanco%5Fnovateur%5Fph%2FDocuments%2FE%2DCommerce%202024%2FBillings&ga=1
+        target: newtab
+        id: 6_529_billings
+      - &ref_17
+        title: Code Generator
+        url: https://www.voucherify.io/generator
+        target: newtab
+        id: 7_529_codegenerator
+      - &ref_18
+        title: One-source File
+        url: >-
+          https://docs.google.com/spreadsheets/d/13E-pGEdvrilygcSKl63BcpynIFz5cuTMEEaVoZ8utC8/edit?gid=831178248#gid=831178248
+        target: newtab
+        id: 8_529_onesourcefile
+    filteredItems:
+      - *ref_10
+      - *ref_11
+      - *ref_12
+      - *ref_13
+      - *ref_14
+      - *ref_15
+      - *ref_16
+      - *ref_17
+      - *ref_18
+  - name: Tasks
+    icon: 🚩
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_19
+        title: BSS Trello
+        icon: 📋
+        url: https://trello.com/b/I4UejUpl/novateur-scope-1-ui-ux
+        target: newtab
+        statusCheck: true
+        id: 0_518_bsstrello
+      - &ref_20
+        title: Site Audit
+        icon: 🔎
+        url: >-
+          https://nestle.sharepoint.com/:x:/r/teams/AgentMarketEcommerceExternal/_layouts/15/doc2.aspx?sourcedoc=%7B15FC9937-A4EC-4F0D-8D98-CF37D619F70A%7D&file=SiteAuditChecklistPH.xlsx&action=default&mobileredirect=true
+        target: newtab
+        statusCheck: true
+        id: 1_518_siteaudit
+      - &ref_21
+        title: Mobile App
+        icon: 📱
+        url: >-
+          https://docs.google.com/spreadsheets/d/19HeQfZIIIOw883_jipOSZMvZ3Hz9d-QEMgXyZJ1jll0/edit?gid=516379383#gid=516379383
+        target: newtab
+        statusCheck: true
+        id: 2_518_mobileapp
+      - &ref_22
+        title: GA4 Migration
+        icon: 📈
+        url: >-
+          https://docs.google.com/spreadsheets/d/1rHdlPGFHk31bZTEn6xtwm_GzOUWqe3vtRVC_nmuFiCg/edit?gid=1753395753#gid=1753395753
+        target: newtab
+        statusCheck: true
+        id: 3_518_gamigration
+      - &ref_23
+        title: Vanessa's Sharepoint
+        url: >-
+          https://nestle.sharepoint.com/teams/AgentMarketEcommerceExternal/Shared%20Documents/Forms/AllItems.aspx?id=%2Fteams%2FAgentMarketEcommerceExternal%2FShared%20Documents%2FPhilippines&viewid=a4061db0%2D9d3d%2D47ec%2D85df%2D91d9e5701f62
+        target: newtab
+        id: 4_518_vanessassharepoint
+      - &ref_24
+        title: GA4 Production
+        icon: ''
+        url: >-
+          https://docs.google.com/spreadsheets/d/1mRWfyo3GNDy1yHeYVTECg9mEeOTuerL7RxxN-RKYKmo/edit?gid=64008980#gid=64008980
+        target: newtab
+        id: 5_518_gaproduction
+      - &ref_25
+        title: Google Analytics
+        url: >-
+          https://analytics.google.com/analytics/web/#/p320102960/reports/intelligenthome?params=_u..nav%3Dmaui%26_u.date00%3D20250101%26_u.date01%3D20250131
+        target: newtab
+        id: 6_518_googleanalytics
+      - &ref_26
+        title: Google Playstore
+        url: >-
+          https://play.google.com/console/u/0/developers/7594449634577215569/app-list?onboardingflow=signup
+        target: newtab
+        id: 7_518_googleplaystore
+      - &ref_27
+        title: Apple Store
+        url: >-
+          https://appstoreconnect.apple.com/login?targetUrl=%2Faccess%2Fusers&authResult=FAILED
+        target: newtab
+        id: 8_518_applestore
+    filteredItems:
+      - *ref_19
+      - *ref_20
+      - *ref_21
+      - *ref_22
+      - *ref_23
+      - *ref_24
+      - *ref_25
+      - *ref_26
+      - *ref_27
+  - name: Markeplace
+    icon: 🛍️
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
+    items:
+      - &ref_28
+        title: Shopee
+        icon: favicon
+        url: https://seller.shopee.ph/
+        target: newtab
+        statusCheck: true
+        id: 0_1013_shopee
+      - &ref_29
+        title: Lazada
+        icon: >-
+          https://img.alicdn.com/imgextra/i4/O1CN0188kHoc1afYHhgTjQ6_!!6000000003357-55-tps-48-40.svg
+        url: https://sellercenter.lazada.com.ph
+        target: newtab
+        statusCheck: true
+        id: 1_1013_lazada
+      - &ref_30
+        title: Order Monitoring
+        icon: >-
+          https://icons.veryicon.com/png/o/miscellaneous/logo-design-of-lingzhuyun/icon-file-type-excel.png
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/kgpancho_novateur_ph1/_layouts/15/Doc.aspx?sourcedoc=%7B1AD33139-F81C-42AE-AB6F-8FF782B88C8F%7D&file=NEW%20MP%20ORDERLIST%2012.12%20ONWARDS.xlsx&fromShare=true&action=default&mobileredirect=true
+        target: newtab
+        statusCheck: true
+        id: 2_1013_ordermonitoring
+    filteredItems:
+      - *ref_28
+      - *ref_29
+      - *ref_30
+  - name: Notes
+    icon: 📝
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
+    items:
+      - &ref_31
+        title: 'SSL Cert: Dec 30, 2024'
+        icon: 📌
+        url: '#'
+        target: sametab
+        id: 0_521_sslcertdec
+      - &ref_32
+        title: 'Cyber Monday: Dec 2 -4'
+        icon: 📌
+        url: '#'
+        target: sametab
+        id: 1_521_cybermondaydec
+      - &ref_33
+        title: '12.12: Dec 7 -15'
+        icon: 📌
+        url: '#'
+        target: sametab
+        id: 2_521_dec
+    filteredItems:
+      - *ref_31
+      - *ref_32
+      - *ref_33
+  - name: Staging Site
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
+    items:
+      - &ref_34
+        title: Website
+        icon: 🌐
+        url: https://nespressostg.bssdev.cloud/
+        target: newtab
+        statusCheck: true
+        id: 0_1154_website
+      - &ref_35
+        title: Website Admin
+        icon: ⚙️
+        url: https://nespressostg.bssdev.cloud/admin_1vi0y5
+        target: newtab
+        statusCheck: true
+        id: 1_1154_websiteadmin
+    icon: 🚧
+    filteredItems:
+      - *ref_34
+      - *ref_35
+  - name: Archive Orders
+    icon: 🗳️
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
+    items:
+      - &ref_36
+        title: September 2024
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/kgpancho_novateur_ph1/_layouts/15/doc2.aspx?sourcedoc=%7BEA201144-E7D9-4F1F-8160-9BF1D3E8DF6D%7D&file=SEPTEMBER%202024%20-%20ECOM%20ORDERS%20MAGENTO%20MANUAL%20TRACKER.xlsx&action=default&mobileredirect=true
+        target: newtab
+        statusCheck: true
+        id: 0_1361_september
+      - &ref_37
+        title: October 2024
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/brflores_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7B001A8171-F373-4E8B-9052-1D201C727983%7D&file=OCTOBER%202024%20-%20ECOM%20ORDERS%20MAGENTO%20MANUAL%20TRACKER%20.xlsx&action=default&mobileredirect=true
+        target: newtab
+        id: 1_1361_october
+      - &ref_38
+        title: November 2024
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/Ebpaeu1CNcpBnEs1vUdAJCkBR2AEXU1ezhex_veOyoZS6A?e=TSmj3j
+        target: newtab
+        id: 2_1361_november
+      - &ref_39
+        title: December 2024
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/Ed6-I6HNCelEskc-8k1_ffwBhMMp06XOtr97nyc8Fdlk8Q?e=sxNguX
+        target: newtab
+        id: 3_1361_december
+      - &ref_40
+        title: January 2025
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/doc2.aspx?sourcedoc=%7B48317198-8E8C-4499-8C01-B0A8BB03E785%7D&file=JANUARY%202025%20-%20ECOM%20ORDERS%20MAGENTO%20MANUAL%20TRACKER.xlsx&fromShare=true&action=default&mobileredirect=true
+        target: newtab
+        id: 4_1361_january
+      - &ref_41
+        title: February 2025
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BCF828F20-084D-4DF6-9239-146CE72AD3C9%7D&file=FEBRUARY%202025%20-%20ECOM%20ORDERS%20MAGENTO%20MANUAL%20TRACKER.xlsx&fromShare=true&action=default&mobileredirect=true
+        target: newtab
+        id: 5_1361_february
+    filteredItems:
+      - *ref_36
+      - *ref_37
+      - *ref_38
+      - *ref_39
+      - *ref_40
+      - *ref_41
+  - name: Boone's Project
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_42
+        title: Multiple Warehouse Gantt Chart
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/brflores_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BAD4C6D42-B229-4900-9387-253FB37AD488%7D&file=Book%205.xlsx&action=editnew&mobileredirect=true&wdTpl=TM55723235&wdlcid=1033&wdNewAndOpenCt=1741141582844&ct=1741141583462&wdOrigin=OFFICECOM-WEB.START.NEW&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=2e2f34d8-1bf1-4e72-b0e4-c3cd21da1a20&cid=c212acae-9fdb-4bed-b0d8-c01cf9809b5b
+        target: newtab
+        id: 0_1412_multiplewarehouseganttchart
+      - &ref_43
+        title: Sales Monitoring Dashboard
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/brflores_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7B2F3CED58-062C-49E4-9271-5B73B3EA8F21%7D&file=Magento%20Sales%20Monitoring.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1741154018671&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=b341db39-5221-40d1-a70e-ff4f2bb477ef&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=2e2f34d8-1bf1-4e72-b0e4-c3cd21da1a20
+        target: newtab
+        id: 1_1412_salesmonitoringdashboard
+      - &ref_44
+        title: BSS Task Monitoring
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/brflores_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7B96EC5D1A-86BD-48F5-80FC-846D245B0622%7D&file=Pending%20and%20Ongoing%20Tasks%20of%20BSS%20Monitoring.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1741154059151&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=ab7a5909-c6e0-46f1-ac9e-840f6190d635&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=2e2f34d8-1bf1-4e72-b0e4-c3cd21da1a20
+        target: newtab
+        id: 2_1412_bsstaskmonitoring
+      - &ref_45
+        title: ECOM Data
+        url: >-
+          https://docs.google.com/spreadsheets/d/13E-pGEdvrilygcSKl63BcpynIFz5cuTMEEaVoZ8utC8/edit?gid=831178248#gid=831178248
+        target: newtab
+        id: 3_1412_ecomdata
+      - &ref_46
+        title: Glassbox
+        url: https://console.nestle.glassboxdigital.io/
+        target: newtab
+        id: 4_1412_glassbox
+      - &ref_47
+        title: SAP Staging
+        url: https://vmpvc002:8100/dispatcher
+        target: newtab
+        id: 5_1412_sapstaging
+    filteredItems:
+      - *ref_42
+      - *ref_43
+      - *ref_44
+      - *ref_45
+      - *ref_46
+      - *ref_47
+  - name: Promo Campaign
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_48
+        title: March 2025
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ETQeJVCCY7xHoKXgwGV5XQUB-6mZaPvs_O4_LPC8oNCCLg?e=3mY3xR
+        target: newtab
+        id: 0_1357_march
+      - &ref_49
+        title: March 2025 Sales - Chris
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BE616BB9A-4087-4781-86F0-C0CA283DA497%7D&file=March%202025%20Sales.xlsx&fromShare=true&action=default&mobileredirect=true
+        target: newtab
+        id: 1_1357_marchsaleschris
+    filteredItems:
+      - *ref_48
+      - *ref_49
