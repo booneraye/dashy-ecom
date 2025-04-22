@@ -505,11 +505,11 @@ sections:
       hideForGuests: false
     items:
       - &ref_49
-        title: March 2025
+        title: April 2025
         url: >-
-          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ETQeJVCCY7xHoKXgwGV5XQUB-6mZaPvs_O4_LPC8oNCCLg?e=3mY3xR
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BB6C41792-A65D-4381-8FCD-7CFAEFE1A40B%7D&file=April%20Promo.xlsx&action=default&mobileredirect=true
         target: newtab
-        id: 0_1357_march
+        id: 0_1357_april
       - &ref_50
         title: March 2025 Sales - Chris
         url: >-
@@ -519,3 +519,19 @@ sections:
     filteredItems:
       - *ref_49
       - *ref_50
+  - name: Previous Campaign
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_51
+        title: March 2025
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ETQeJVCCY7xHoKXgwGV5XQUB-6mZaPvs_O4_LPC8oNCCLg?e=3mY3xR
+        target: newtab
+        id: 0_1693_march
+    filteredItems:
+      - *ref_51
