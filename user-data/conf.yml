@@ -523,9 +523,16 @@ sections:
           https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BE616BB9A-4087-4781-86F0-C0CA283DA497%7D&file=March%202025%20Sales.xlsx&fromShare=true&action=default&mobileredirect=true
         target: newtab
         id: 1_1357_marchsaleschris
+      - &ref_52
+        title: June 2025
+        url: >-
+          https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ETXUU96jNedDkRE3mN0F-f4BiIbVuBjezzNeFSJHrhgG0g?rtime=mLViuzKi3Ug
+        target: newtab
+        id: 2_1357_june
     filteredItems:
       - *ref_50
       - *ref_51
+      - *ref_52
   - name: Previous Campaign
     displayData:
       sortBy: default
@@ -534,18 +541,18 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_52
+      - &ref_53
         title: March 2025
         url: >-
           https://novateurcoffeeconcepts-my.sharepoint.com/:x:/g/personal/cvillavilla_novateur_ph/ETQeJVCCY7xHoKXgwGV5XQUB-6mZaPvs_O4_LPC8oNCCLg?e=3mY3xR
         target: newtab
         id: 0_1693_march
-      - &ref_53
+      - &ref_54
         title: April 2025
         url: >-
           https://novateurcoffeeconcepts-my.sharepoint.com/:x:/r/personal/cvillavilla_novateur_ph/_layouts/15/Doc.aspx?sourcedoc=%7BB6C41792-A65D-4381-8FCD-7CFAEFE1A40B%7D&file=April%20Promo.xlsx&action=default&mobileredirect=true
         target: newtab
         id: 1_1693_april
     filteredItems:
-      - *ref_52
       - *ref_53
+      - *ref_54
